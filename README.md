@@ -2,7 +2,7 @@
 
 LLAMA 3.1 Chat, Streamlit kullanarak oluşturulmuş, LLAMA 3.1 dil modeliyle etkileşime girmenizi sağlayan bir sohbet uygulamasıdır. Bu uygulama, kullanıcıların farklı LLAMA modelleri arasında geçiş yapmasına, sohbet geçmişini kaydetmesine ve yönetmesine olanak tanır.
 
-![LLAMA 3.1 Chat Screenshot](path_to_your_screenshot.png)
+![LLAMA 3.1 Chat Screenshot](resim.png)
 
 ## Özellikler
 
@@ -58,4 +58,4 @@ Katkılarınızı memnuniyetle karşılıyoruz! Lütfen bir pull request gönder
 
 ## Lisans
 
-Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
+//////////////////////////
