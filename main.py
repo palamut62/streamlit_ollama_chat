@@ -61,25 +61,25 @@ def initialize_database():
 conn, c = initialize_database()
 
 
-# Ollama'nın çalışıp çalışmadığını kontrol eden ve gerekirse başlatan fonksiyon
-def check_and_run_ollama():
-    try:
-        # Ollama'nın çalışıp çalışmadığını kontrol et
-        result = subprocess.run(["tasklist", "/FI", "IMAGENAME eq ollama.exe"], capture_output=True, text=True)
-        if "ollama.exe" not in result.stdout:
-            # Ollama çalışmıyorsa, başlat
-            subprocess.Popen(["ollama", "app.exe"], shell=True)
-            st.success("Ollama otomatik olarak başlatıldı.")
-        else:
-            st.info("Ollama zaten çalışıyor.")
-    except FileNotFoundError:
-        st.error("Ollama bulunamadı. Lütfen yüklü olduğundan ve PATH'te olduğundan emin olun.")
-    except Exception as e:
-        st.error(f"Ollama kontrol edilirken bir hata oluştu: {e}")
-
-
-# Ollama'yı otomatik olarak kontrol et ve gerekirse başlat
-check_and_run_ollama()
+# # Ollama'nın çalışıp çalışmadığını kontrol eden ve gerekirse başlatan fonksiyon
+# def check_and_run_ollama():
+#     try:
+#         # Ollama'nın çalışıp çalışmadığını kontrol et
+#         result = subprocess.run(["tasklist", "/FI", "IMAGENAME eq ollama.exe"], capture_output=True, text=True)
+#         if "ollama.exe" not in result.stdout:
+#             # Ollama çalışmıyorsa, başlat
+#             subprocess.Popen(["ollama", "app.exe"], shell=True)
+#             st.success("Ollama otomatik olarak başlatıldı.")
+#         else:
+#             st.info("Ollama zaten çalışıyor.")
+#     except FileNotFoundError:
+#         st.error("Ollama bulunamadı. Lütfen yüklü olduğundan ve PATH'te olduğundan emin olun.")
+#     except Exception as e:
+#         st.error(f"Ollama kontrol edilirken bir hata oluştu: {e}")
+#
+#
+# # Ollama'yı otomatik olarak kontrol et ve gerekirse başlat
+# check_and_run_ollama()
 
 
 # Function to save message to database
