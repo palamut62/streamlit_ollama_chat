@@ -23,7 +23,7 @@ GROQ_API_KEY = config_data["GROQ_API_KEY"]
 os.environ["GROQ_API_KEY"] = GROQ_API_KEY
 
 client = Groq()
-
+st.sidebar.title("🦙 LLAMA Chat")
 
 # Function to initialize the database
 def initialize_database():
@@ -152,6 +152,9 @@ if st.sidebar.button("New Chat"):
     st.session_state.chat_history = []
     st.rerun()
 
+# Main chat area
+st.title("🦙 LLAMA 3.1. ChatBot")
+
 # List previous chats
 chat_ids = get_all_chat_ids()
 
@@ -173,8 +176,7 @@ for chat_id in chat_ids:
                 st.session_state.chat_history = []
         st.rerun()
 
-# Main chat area
-st.title("🦙 LLAMA 3.1. ChatBot")
+
 
 # Ensure current_chat_id exists
 if "current_chat_id" not in st.session_state:
